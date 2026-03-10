@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAISON — Fine Dining</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="#">MAISON</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="nav-reserve" href="#contact">Reserve</a>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-content">
+      <p class="hero-tag">Paris · Est. 1998</p>
+      <h1 class="hero-title">Where<br><em>flavor</em><br>becomes art</h1>
+      <p class="hero-desc">An intimate fine dining experience where classical French technique meets the season's finest ingredients.</p>
+      <div class="hero-cta">
+        <a class="btn-primary" href="#menu">Explore Menu</a>
+        <a class="btn-secondary" href="#contact">Reserve</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="stats-strip">
+    <div class="stat">
+      <div class="stat-num">3</div>
+      <div class="stat-label">Michelin Stars</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">26</div>
+      <div class="stat-label">Years Excellence</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">12</div>
+      <div class="stat-label">Covers/Evening</div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="about-content">
+      <h2 class="section-title">Our Philosophy</h2>
+      <p>At Maison, we believe true cuisine is storytelling. Each plate is a conversation between our hands, the land, and the seasons.</p>
+      <p>We source exclusively from farmers who share our obsession for small plots, biodynamic practice, and patient flavor cultivation.</p>
+      <div class="chef-sig">
+        <strong>Antoine Beaumont</strong>
+        <small>Executive Chef & Founder</small>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu">
+    <h2 class="section-title">Menu</h2>
+    
+    <div class="menu-tabs">
+      <button class="menu-tab active" onclick="switchMenu('starters', this)">Starters</button>
+      <button class="menu-tab" onclick="switchMenu('mains', this)">Mains</button>
+      <button class="menu-tab" onclick="switchMenu('desserts', this)">Desserts</button>
+    </div>
+
+    <div id="starters" class="menu-panel active">
+      <div class="dish">
+        <h3>Oyster & Caviar</h3>
+        <p>Gillardeau oyster, Oscietra caviar, cucumber water</p>
+        <span class="price">€42</span>
+      </div>
+      <div class="dish">
+        <h3>Foie Gras Terrine</h3>
+        <p>Duck foie gras, sauternes gel, brioche, truffle</p>
+        <span class="price">€58</span>
+      </div>
+      <div class="dish">
+        <h3>White Asparagus</h3>
+        <p>Hollandaise foam, smoked salmon, dill oil</p>
+        <span class="price">€36</span>
+      </div>
+    </div>
+
+    <div id="mains" class="menu-panel">
+      <div class="dish">
+        <h3>Wagyu Tenderloin</h3>
+        <p>A5 Wagyu, morel mushroom, potato pavé, jus</p>
+        <span class="price">€145</span>
+      </div>
+      <div class="dish">
+        <h3>Turbot en Croûte</h3>
+        <p>Wild turbot, saffron velouté, samphire, lemon</p>
+        <span class="price">€98</span>
+      </div>
+      <div class="dish">
+        <h3>Truffle Risotto</h3>
+        <p>Carnaroli rice, black truffle, aged Parmigiano</p>
+        <span class="price">€72</span>
+      </div>
+    </div>
+
+    <div id="desserts" class="menu-panel">
+      <div class="dish">
+        <h3>Chocolate Soufflé</h3>
+        <p>Valrhona 72%, salted caramel, ice cream</p>
+        <span class="price">€28</span>
+      </div>
+      <div class="dish">
+        <h3>Strawberry Pavlova</h3>
+        <p>Gariguette strawberry, champagne cream, basil</p>
+        <span class="price">€24</span>
+      </div>
+      <div class="dish">
+        <h3>Cheese Selection</h3>
+        <p>French artisan cheeses with condiments</p>
+        <span class="price">€32</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Reserve a Table</h2>
+    <form class="contact-form">
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" placeholder="Your name">
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" placeholder="your@email.com">
+      </div>
+      <div class="form-group">
+        <label>Date</label>
+        <input type="date">
+      </div>
+      <div class="form-group">
+        <label>Guests</label>
+        <select>
+          <option>2 guests</option>
+          <option>3 guests</option>
+          <option>4 guests</option>
+          <option>5+ guests</option>
+        </select>
+      </div>
+      <button type="submit" class="btn-submit">Reserve</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Maison Fine Dining. All rights reserved.</p>
+    <p>Paris, France | +33 1 42 68 75 90</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

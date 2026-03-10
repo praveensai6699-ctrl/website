@@ -1,0 +1,523 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cream: #f5f0e8;
+  --dark: #0e0d0b;
+  --gold: #c9a84c;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--dark);
+  color: var(--cream);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  background: rgba(14, 13, 11, 0.95);
+  z-index: 500;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--gold);
+  text-decoration: none;
+  letter-spacing: 0.2em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  opacity: 0.7;
+  transition: opacity 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+  color: var(--gold);
+}
+
+.nav-reserve {
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  transition: background 0.3s;
+}
+
+.nav-reserve:hover {
+  background: var(--gold);
+  color: var(--dark);
+}
+
+/* HERO */
+#hero {
+  margin-top: 5rem;
+  padding: 4rem 2rem;
+  text-align: center;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero-content {
+  max-width: 800px;
+  width: 100%;
+}
+
+.hero-tag {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.hero-desc {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  opacity: 0.85;
+  line-height: 1.8;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 0.8rem 2rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid var(--gold);
+  transition: all 0.3s;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--dark);
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: var(--gold);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--gold);
+}
+
+.btn-secondary:hover {
+  background: var(--gold);
+  color: var(--dark);
+}
+
+/* STATS STRIP */
+.stats-strip {
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem 2rem;
+  border-top: 1px solid rgba(201, 168, 76, 0.2);
+  border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.stat {
+  text-align: center;
+  flex: 1;
+  min-width: 150px;
+}
+
+.stat-num {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+/* SECTIONS */
+section {
+  padding: 3rem 2rem;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 400;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+  text-align: center;
+  max-width: 900px;
+  width: 100%;
+}
+
+.section-title em {
+  color: var(--gold);
+  font-style: italic;
+}
+
+/* ABOUT */
+#about {
+  text-align: center;
+}
+
+#about p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  opacity: 0.85;
+  line-height: 1.8;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-content {
+  max-width: 900px;
+  width: 100%;
+}
+
+.chef-sig {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chef-sig strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--gold);
+}
+
+.chef-sig small {
+  opacity: 0.7;
+  font-size: 0.8rem;
+}
+
+/* MENU */
+#menu {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.menu-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.menu-tab {
+  background: transparent;
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  color: var(--cream);
+  padding: 0.6rem 1.5rem;
+  cursor: pointer;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.menu-tab.active {
+  background: var(--gold);
+  color: var(--dark);
+  border-color: var(--gold);
+}
+
+.menu-tab:hover {
+  border-color: var(--gold);
+}
+
+.menu-panel {
+  display: none;
+  width: 100%;
+}
+
+.menu-panel.active {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+.dish {
+  padding: 1.5rem;
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  transition: all 0.3s;
+}
+
+.dish:hover {
+  border-color: var(--gold);
+  background: rgba(201, 168, 76, 0.05);
+}
+
+.dish h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--gold);
+}
+
+.dish p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  opacity: 0.75;
+  line-height: 1.6;
+}
+
+.price {
+  font-weight: 500;
+  color: var(--gold);
+  font-size: 1.1rem;
+}
+
+/* CONTACT */
+#contact {
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 600px;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  opacity: 0.7;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.3);
+  color: var(--cream);
+  padding: 0.7rem 0;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-group input::placeholder {
+  color: rgba(245, 240, 232, 0.3);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-bottom-color: var(--gold);
+}
+
+.form-group select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  padding-right: 1rem;
+}
+
+.form-group select option {
+  background: var(--dark);
+  color: var(--cream);
+}
+
+.btn-submit {
+  width: 100%;
+  background: var(--gold);
+  color: var(--dark);
+  border: none;
+  padding: 0.8rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  margin-top: 1rem;
+}
+
+.btn-submit:hover {
+  background: rgba(201, 168, 76, 0.85);
+  transform: translateY(-2px);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 3rem 2rem;
+  border-top: 1px solid rgba(201, 168, 76, 0.2);
+  opacity: 0.7;
+  font-size: 0.85rem;
+  width: 100%;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  section {
+    padding: 2rem 1.5rem;
+  }
+
+  #hero {
+    padding: 2rem 1.5rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+  }
+
+  .stats-strip {
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .stat {
+    min-width: 120px;
+  }
+
+  .menu-panel.active {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 1rem;
+  }
+
+  .nav-logo {
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    gap: 0.8rem;
+    font-size: 0.65rem;
+  }
+
+  section {
+    padding: 1.5rem 1rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+  }
+
+  .stats-strip {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .stat {
+    min-width: 100%;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    padding: 0.8rem 1rem;
+  }
+}
