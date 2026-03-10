@@ -5,157 +5,490 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MAISON — Fine Dining</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Bebas+Neue&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ===================== NAV ===================== -->
   <nav>
     <a class="nav-logo" href="#">MAISON</a>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
+      <li><a href="#about">Story</a></li>
       <li><a href="#menu">Menu</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#reservation">Contact</a></li>
     </ul>
-    <a class="nav-reserve" href="#contact">Reserve</a>
+    <a class="nav-reserve" href="#reservation">Reserve a Table</a>
   </nav>
 
+  <!-- ===================== HERO ===================== -->
   <section id="hero">
-    <div class="hero-content">
+    <div class="hero-left">
       <p class="hero-tag">Paris · Est. 1998</p>
-      <h1 class="hero-title">Where<br><em>flavor</em><br>becomes art</h1>
-      <p class="hero-desc">An intimate fine dining experience where classical French technique meets the season's finest ingredients.</p>
+      <h1 class="hero-title">
+        Where<br>
+        <em>flavor</em><br>
+        becomes<br>
+        art
+      </h1>
+      <p class="hero-desc">An intimate fine dining experience where classical French technique meets the poetry of the season's finest ingredients.</p>
       <div class="hero-cta">
-        <a class="btn-primary" href="#menu">Explore Menu</a>
-        <a class="btn-secondary" href="#contact">Reserve</a>
+        <a class="btn-primary" href="#menu"><span>Explore Menu</span></a>
+        <a class="btn-secondary" href="#reservation">Reserve Tonight</a>
       </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-img-wrap">
+        <img class="hero-img" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80" alt="Fine dining table setting">
+        <div class="hero-img-overlay"></div>
+      </div>
+      <div class="hero-year">98</div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span class="scroll-text">Scroll</span>
     </div>
   </section>
 
-  <div class="stats-strip">
-    <div class="stat">
-      <div class="stat-num">3</div>
-      <div class="stat-label">Michelin Stars</div>
+  <!-- ===================== ABOUT STRIP ===================== -->
+  <div class="about-strip reveal">
+    <div class="strip-item">
+      <div class="strip-num">3</div>
+      <div class="strip-label">Michelin Stars</div>
     </div>
-    <div class="stat">
-      <div class="stat-num">26</div>
-      <div class="stat-label">Years Excellence</div>
+    <div class="strip-divider"></div>
+    <div class="strip-item">
+      <div class="strip-num">26</div>
+      <div class="strip-label">Years of Excellence</div>
     </div>
-    <div class="stat">
-      <div class="stat-num">12</div>
-      <div class="stat-label">Covers/Evening</div>
+    <div class="strip-divider"></div>
+    <div class="strip-item">
+      <div class="strip-num">12</div>
+      <div class="strip-label">Covers per Evening</div>
+    </div>
+    <div class="strip-divider"></div>
+    <div class="strip-item">
+      <div class="strip-num">8</div>
+      <div class="strip-label">Course Tasting Menu</div>
+    </div>
+    <div class="strip-divider"></div>
+    <div class="strip-item">
+      <div class="strip-num">600+</div>
+      <div class="strip-label">Wine Selections</div>
     </div>
   </div>
 
+  <!-- ===================== MARQUEE ===================== -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <div class="marquee-item">
+        <span class="marquee-text">Exceptional cuisine since 1998</span>
+        <span class="marquee-dot"></span>
+        <span class="marquee-text">Crafted with passion</span>
+        <span class="marquee-dot"></span>
+        <span class="marquee-text">Seasonal ingredients, timeless flavors</span>
+        <span class="marquee-dot"></span>
+        <span class="marquee-text">A journey through taste</span>
+        <span class="marquee-dot"></span>
+        <span class="marquee-text">Fine dining redefined</span>
+        <span class="marquee-dot"></span>
+        <span class="marquee-text">Exceptional cuisine since 1998</span>
+        <span class="marquee-dot"></span>
+        <span class="marquee-text">Crafted with passion</span>
+        <span class="marquee-dot"></span>
+        <span class="marquee-text">Seasonal ingredients, timeless flavors</span>
+        <span class="marquee-dot"></span>
+        <span class="marquee-text">A journey through taste</span>
+        <span class="marquee-dot"></span>
+        <span class="marquee-text">Fine dining redefined</span>
+        <span class="marquee-dot"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== ABOUT ===================== -->
   <section id="about">
-    <div class="about-content">
-      <h2 class="section-title">Our Philosophy</h2>
-      <p>At Maison, we believe true cuisine is storytelling. Each plate is a conversation between our hands, the land, and the seasons.</p>
-      <p>We source exclusively from farmers who share our obsession for small plots, biodynamic practice, and patient flavor cultivation.</p>
-      <div class="chef-sig">
-        <strong>Antoine Beaumont</strong>
+    <div class="about-visual reveal">
+      <img class="about-img-main" src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?w=900&q=80" alt="Chef at work">
+      <img class="about-img-accent" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80" alt="Fine dining detail">
+      <div class="about-badge">
+        <span>★★★</span>
+        <span>Michelin</span>
+      </div>
+    </div>
+    <div class="about-text">
+      <p class="section-tag reveal">Our Philosophy</p>
+      <h2 class="section-title reveal reveal-delay-1">
+        The art of<br>dining, <em>purely</em><br>expressed
+      </h2>
+      <p class="section-body reveal reveal-delay-2">At Maison, we believe that true cuisine is not merely sustenance — it is the most intimate form of storytelling. Each plate we compose is a conversation between our hands, the land, and the seasons that govern it.</p>
+      <p class="section-body reveal reveal-delay-2">We source exclusively from farmers who share our obsession: small plots, biodynamic practice, and the patient cultivation of flavor. Nothing arrives on your table by accident.</p>
+      <div class="signature reveal reveal-delay-3">
+        Antoine Beaumont
         <small>Executive Chef & Founder</small>
       </div>
     </div>
   </section>
 
+  <!-- ===================== MENU ===================== -->
   <section id="menu">
-    <h2 class="section-title">Menu</h2>
-    
-    <div class="menu-tabs">
-      <button class="menu-tab active" onclick="switchMenu('starters', this)">Starters</button>
-      <button class="menu-tab" onclick="switchMenu('mains', this)">Mains</button>
-      <button class="menu-tab" onclick="switchMenu('desserts', this)">Desserts</button>
+    <div class="menu-header reveal">
+      <div>
+        <p class="section-tag">Culinary Offerings</p>
+        <h2 class="section-title" style="font-size: clamp(3rem,4.5vw,5rem);">A <em>curated</em> menu</h2>
+      </div>
+      <div class="menu-tabs">
+        <button class="menu-tab active" onclick="switchMenu('starters', this)">Starters</button>
+        <button class="menu-tab" onclick="switchMenu('mains', this)">Mains</button>
+        <button class="menu-tab" onclick="switchMenu('desserts', this)">Desserts</button>
+      </div>
     </div>
 
     <div id="starters" class="menu-panel active">
-      <div class="dish">
-        <h3>Oyster & Caviar</h3>
-        <p>Gillardeau oyster, Oscietra caviar, cucumber water</p>
-        <span class="price">€42</span>
+      <div class="dish-card reveal">
+        <img class="dish-img" src="https://images.unsplash.com/photo-1544025162-d76694265947?w=700&q=80" alt="Oyster & Caviar">
+        <div class="dish-overlay">
+          <span class="dish-category">Signature Starter</span>
+          <h3 class="dish-name">Oyster & Caviar</h3>
+          <p class="dish-desc">Gillardeau oyster, Oscietra caviar, cucumber water</p>
+          <span class="dish-price">€42</span>
+        </div>
+        <span class="dish-number">01</span>
       </div>
-      <div class="dish">
-        <h3>Foie Gras Terrine</h3>
-        <p>Duck foie gras, sauternes gel, brioche, truffle</p>
-        <span class="price">€58</span>
+      <div class="dish-card reveal reveal-delay-1">
+        <img class="dish-img" src="https://images.unsplash.com/photo-1547592180-85f173990554?w=700&q=80" alt="Foie Gras Terrine">
+        <div class="dish-overlay">
+          <span class="dish-category">Chef's Selection</span>
+          <h3 class="dish-name">Foie Gras Terrine</h3>
+          <p class="dish-desc">Duck foie gras, sauternes gel, brioche, black truffle</p>
+          <span class="dish-price">€58</span>
+        </div>
+        <span class="dish-number">02</span>
       </div>
-      <div class="dish">
-        <h3>White Asparagus</h3>
-        <p>Hollandaise foam, smoked salmon, dill oil</p>
-        <span class="price">€36</span>
+      <div class="dish-card reveal reveal-delay-2">
+        <img class="dish-img" src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=700&q=80" alt="White Asparagus">
+        <div class="dish-overlay">
+          <span class="dish-category">Seasonal</span>
+          <h3 class="dish-name">White Asparagus</h3>
+          <p class="dish-desc">Hollandaise foam, smoked salmon, dill oil</p>
+          <span class="dish-price">€36</span>
+        </div>
+        <span class="dish-number">03</span>
       </div>
     </div>
 
     <div id="mains" class="menu-panel">
-      <div class="dish">
-        <h3>Wagyu Tenderloin</h3>
-        <p>A5 Wagyu, morel mushroom, potato pavé, jus</p>
-        <span class="price">€145</span>
+      <div class="dish-card reveal">
+        <img class="dish-img" src="https://images.unsplash.com/photo-1558030006-450675393462?w=700&q=80" alt="Wagyu Tenderloin">
+        <div class="dish-overlay">
+          <span class="dish-category">Signature Main</span>
+          <h3 class="dish-name">Wagyu Tenderloin</h3>
+          <p class="dish-desc">A5 Wagyu, morel mushroom, potato pavé, jus</p>
+          <span class="dish-price">€145</span>
+        </div>
+        <span class="dish-number">04</span>
       </div>
-      <div class="dish">
-        <h3>Turbot en Croûte</h3>
-        <p>Wild turbot, saffron velouté, samphire, lemon</p>
-        <span class="price">€98</span>
+      <div class="dish-card reveal reveal-delay-1">
+        <img class="dish-img" src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=700&q=80" alt="Turbot en Croûte">
+        <div class="dish-overlay">
+          <span class="dish-category">From the Sea</span>
+          <h3 class="dish-name">Turbot en Croûte</h3>
+          <p class="dish-desc">Wild turbot, saffron velouté, samphire, lemon</p>
+          <span class="dish-price">€98</span>
+        </div>
+        <span class="dish-number">05</span>
       </div>
-      <div class="dish">
-        <h3>Truffle Risotto</h3>
-        <p>Carnaroli rice, black truffle, aged Parmigiano</p>
-        <span class="price">€72</span>
+      <div class="dish-card reveal reveal-delay-2">
+        <img class="dish-img" src="https://images.unsplash.com/photo-1432139509613-5c4255815697?w=700&q=80" alt="Truffle Risotto">
+        <div class="dish-overlay">
+          <span class="dish-category">Garden</span>
+          <h3 class="dish-name">Truffle Risotto</h3>
+          <p class="dish-desc">Carnaroli rice, black truffle, aged Parmigiano</p>
+          <span class="dish-price">€72</span>
+        </div>
+        <span class="dish-number">06</span>
       </div>
     </div>
 
     <div id="desserts" class="menu-panel">
-      <div class="dish">
-        <h3>Chocolate Soufflé</h3>
-        <p>Valrhona 72%, salted caramel, ice cream</p>
-        <span class="price">€28</span>
+      <div class="dish-card reveal">
+        <img class="dish-img" src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=700&q=80" alt="Chocolate Soufflé">
+        <div class="dish-overlay">
+          <span class="dish-category">Signature Dessert</span>
+          <h3 class="dish-name">Chocolate Soufflé</h3>
+          <p class="dish-desc">Valrhona 72%, salted caramel, vanilla ice cream</p>
+          <span class="dish-price">€28</span>
+        </div>
+        <span class="dish-number">07</span>
       </div>
-      <div class="dish">
-        <h3>Strawberry Pavlova</h3>
-        <p>Gariguette strawberry, champagne cream, basil</p>
-        <span class="price">€24</span>
+      <div class="dish-card reveal reveal-delay-1">
+        <img class="dish-img" src="https://images.unsplash.com/photo-1470324161839-ce2bb6fa6bc3?w=700&q=80" alt="Strawberry Pavlova">
+        <div class="dish-overlay">
+          <span class="dish-category">Seasonal</span>
+          <h3 class="dish-name">Strawberry Pavlova</h3>
+          <p class="dish-desc">Gariguette strawberry, champagne cream, basil</p>
+          <span class="dish-price">€24</span>
+        </div>
+        <span class="dish-number">08</span>
       </div>
-      <div class="dish">
-        <h3>Cheese Selection</h3>
-        <p>French artisan cheeses with condiments</p>
-        <span class="price">€32</span>
+      <div class="dish-card reveal reveal-delay-2">
+        <img class="dish-img" src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=700&q=80" alt="Fromage Trolley">
+        <div class="dish-overlay">
+          <span class="dish-category">Cheese Course</span>
+          <h3 class="dish-name">Fromage Trolley</h3>
+          <p class="dish-desc">Selection of 12 French artisan cheeses, condiments</p>
+          <span class="dish-price">€32</span>
+        </div>
+        <span class="dish-number">09</span>
       </div>
     </div>
   </section>
 
-  <section id="contact">
-    <h2 class="section-title">Reserve a Table</h2>
-    <form class="contact-form">
-      <div class="form-group">
-        <label>Name</label>
-        <input type="text" placeholder="Your name">
+  <!-- ===================== EXPERIENCE ===================== -->
+  <section id="experience">
+    <div class="exp-text">
+      <p class="section-tag reveal">The Maison Experience</p>
+      <h2 class="section-title reveal reveal-delay-1">Every detail,<br><em>considered</em></h2>
+      <p class="section-body reveal reveal-delay-2">From the moment you arrive to the last petit four, Maison orchestrates an evening that transcends the ordinary. We obsess over the details so you can be fully present.</p>
+      <div class="exp-features">
+        <div class="exp-feature reveal">
+          <div class="exp-icon">◈</div>
+          <div>
+            <h4 class="exp-feature-title">Private Dining Rooms</h4>
+            <p class="exp-feature-desc">Three intimate rooms for exclusive gatherings of 4–16 guests, each with bespoke artwork and dedicated service.</p>
+          </div>
+        </div>
+        <div class="exp-feature reveal reveal-delay-1">
+          <div class="exp-icon">◇</div>
+          <div>
+            <h4 class="exp-feature-title">Wine Pairing Journey</h4>
+            <p class="exp-feature-desc">Our sommelier curates pairings across 600+ labels, guided by the evening's menu and your personal palate.</p>
+          </div>
+        </div>
+        <div class="exp-feature reveal reveal-delay-2">
+          <div class="exp-icon">✦</div>
+          <div>
+            <h4 class="exp-feature-title">Kitchen Theatre</h4>
+            <p class="exp-feature-desc">The Chef's Table seats eight directly in our open kitchen, offering an unscripted view into the art of creation.</p>
+          </div>
+        </div>
       </div>
-      <div class="form-group">
-        <label>Email</label>
-        <input type="email" placeholder="your@email.com">
+    </div>
+    <div class="exp-visual reveal">
+      <div class="exp-img-wrap">
+        <img class="exp-img" src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=800&q=80" alt="Restaurant interior">
+        <div class="exp-img-frame"></div>
       </div>
-      <div class="form-group">
-        <label>Date</label>
-        <input type="date">
+      <div class="exp-quote">
+        <p class="exp-quote-text">"A transcendent experience that awakens every sense."</p>
+        <p class="exp-quote-author">Le Monde, 2023</p>
       </div>
-      <div class="form-group">
-        <label>Guests</label>
-        <select>
-          <option>2 guests</option>
-          <option>3 guests</option>
-          <option>4 guests</option>
-          <option>5+ guests</option>
-        </select>
-      </div>
-      <button type="submit" class="btn-submit">Reserve</button>
-    </form>
+    </div>
   </section>
 
+  <!-- ===================== GALLERY ===================== -->
+  <section id="gallery">
+    <div class="gallery-header reveal">
+      <p class="section-tag" style="justify-content: center;">Inside Maison</p>
+      <h2 class="section-title" style="font-size: clamp(3rem,4.5vw,5rem);">Moments <em>captured</em></h2>
+    </div>
+    <div class="gallery-track">
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=600&q=80" alt="The dining room">
+        <span class="gallery-item-label">The dining room</span>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1484980972926-edee96e0960d?w=600&q=80" alt="Mise en place">
+        <span class="gallery-item-label">Mise en place</span>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=600&q=80" alt="The bar">
+        <span class="gallery-item-label">The bar</span>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?w=600&q=80" alt="Detail">
+        <span class="gallery-item-label">Detail</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section id="testimonials">
+    <div class="testi-bg-text">MAISON</div>
+    <div class="testi-header reveal">
+      <p class="section-tag" style="justify-content:center;">Voices</p>
+      <h2 class="section-title" style="font-size:clamp(3rem,4.5vw,5rem); text-align:center;">What guests <em>say</em></h2>
+    </div>
+    <div class="testi-slider reveal">
+      <div class="testi-slide active">
+        <div class="testi-quote-mark">"</div>
+        <p class="testi-text">A meal at Maison is not an evening out — it is a memory you will carry for years. Chef Beaumont's cooking speaks in a language that needs no translation.</p>
+        <p class="testi-author">Isabella R. — New York</p>
+      </div>
+      <div class="testi-slide">
+        <div class="testi-quote-mark">"</div>
+        <p class="testi-text">Every element on the plate exists for a reason. The precision, the harmony of flavors — this is cooking at its most thoughtful and most joyful.</p>
+        <p class="testi-author">Marcus T. — London</p>
+      </div>
+      <div class="testi-slide">
+        <div class="testi-quote-mark">"</div>
+        <p class="testi-text">We celebrated our anniversary here. The team anticipated our every need before we knew it ourselves. Simply irreplaceable.</p>
+        <p class="testi-author">Claire & Pierre D. — Paris</p>
+      </div>
+    </div>
+    <div class="testi-dots reveal">
+      <div class="testi-dot active" onclick="goToSlide(0, this)"></div>
+      <div class="testi-dot" onclick="goToSlide(1, this)"></div>
+      <div class="testi-dot" onclick="goToSlide(2, this)"></div>
+    </div>
+  </section>
+
+  <!-- ===================== RESERVATION ===================== -->
+  <section id="reservation">
+    <div class="res-text">
+      <p class="section-tag reveal">Make a Reservation</p>
+      <h2 class="section-title reveal reveal-delay-1">Reserve your<br><em>table</em> tonight</h2>
+      <p class="section-body reveal reveal-delay-2">Maison seats twelve covers per evening, Tuesday through Saturday. We recommend booking four to six weeks in advance for dinner service.</p>
+      <div class="contact-details">
+        <div class="contact-item reveal reveal-delay-1">
+          <span class="contact-icon">✆</span>
+          <div>
+            <p class="contact-label">Telephone</p>
+            <p class="contact-value">+33 1 42 68 75 90</p>
+          </div>
+        </div>
+        <div class="contact-item reveal reveal-delay-2">
+          <span class="contact-icon">✉</span>
+          <div>
+            <p class="contact-label">Email</p>
+            <p class="contact-value">reservations@maison-paris.com</p>
+          </div>
+        </div>
+        <div class="contact-item reveal reveal-delay-3">
+          <span class="contact-icon">◉</span>
+          <div>
+            <p class="contact-label">Address</p>
+            <p class="contact-value">18 Rue du Faubourg Saint-Honoré, Paris</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="res-form reveal reveal-delay-1">
+      <h3 class="form-title">Request a Table</h3>
+      <p class="form-subtitle">We will confirm your reservation within 24 hours</p>
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" placeholder="Antoine">
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" placeholder="Beaumont">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="you@email.com">
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Date</label>
+          <input type="date">
+        </div>
+        <div class="form-group">
+          <label>Party Size</label>
+          <select>
+            <option>1 Guest</option>
+            <option>2 Guests</option>
+            <option>3 Guests</option>
+            <option>4 Guests</option>
+            <option>5 Guests</option>
+            <option>6+ Guests</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Experience</label>
+        <select>
+          <option>Dinner Service</option>
+          <option>Chef's Table</option>
+          <option>Private Dining</option>
+          <option>Tasting Menu (8 courses)</option>
+        </select>
+      </div>
+      <button class="btn-submit" onclick="handleSubmit(event)"><span>Request Reservation</span></button>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
   <footer>
-    <p>&copy; 2024 Maison Fine Dining. All rights reserved.</p>
-    <p>Paris, France | +33 1 42 68 75 90</p>
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-logo">MAISON</div>
+        <p class="footer-tagline">"Where flavor becomes art"</p>
+        <div class="footer-social">
+          <a class="social-link" href="#">f</a>
+          <a class="social-link" href="#">in</a>
+          <a class="social-link" href="#">ig</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Navigation</p>
+        <ul>
+          <li><a href="#about">Our Story</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#reservation">Reservations</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-hours">
+        <p class="footer-col-title">Hours</p>
+        <p><strong>Tuesday – Thursday</strong><br>7:00 – 22:30</p>
+        <p style="margin-top:0.8rem"><strong>Friday – Saturday</strong><br>7:00 – 23:00</p>
+        <p style="margin-top:0.8rem; opacity:0.35;">Closed Sunday & Monday</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Visit</p>
+        <ul>
+          <li><a href="#">18 Rue du Faubourg</a></li>
+          <li><a href="#">Saint-Honoré, 75008</a></li>
+          <li><a href="#" style="margin-top:0.5rem; display:block">Paris, France</a></li>
+          <li><a href="#">+33 1 42 68 75 90</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2024 Maison. All rights reserved.</p>
+      <div class="footer-awards">
+        <span class="award">3 Michelin Stars</span>
+        <span class="award">World's 50 Best</span>
+        <span class="award">Gault & Millau 19/20</span>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>
+
+  <!-- ===================== WATSON ASSISTANT CHATBOT ===================== -->
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "e592facf-b018-48bc-89c8-008973947465",
+      region: "au-syd",
+      serviceInstanceID: "bc78176a-3761-4611-9679-b66697af81a8",
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+
 </body>
 </html>
